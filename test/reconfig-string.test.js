@@ -41,4 +41,8 @@ describe('reconfigString', () => {
   it('Should return false if strings params have different unique letters', () => { // 7th test
     expect(reconfigString('abc', 'ddf')).toBe(false)
   })
+
+  it('Should return false if strings provided have different length even with same unique letters', () => { // 8th test
+    expect(reconfigString('aab', 'ab')).toBe(false)
+  })
 })
