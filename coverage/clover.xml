@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1706286498420" clover="3.2.0">
+  <project timestamp="1706286498421" name="All files">
+    <metrics statements="49" coveredstatements="41" conditionals="9" coveredconditionals="8" methods="6" coveredmethods="5" elements="64" coveredelements="54" complexity="0" loc="49" ncloc="49" packages="2" files="2" classes="2"/>
+    <package name="components">
+      <metrics statements="41" coveredstatements="41" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
+      <file name="Calculator.jsx" path="C:\Users\Albert\Desktop\Programacio\Programes utilitzats\React\LEARNING\React Vitest TDD\components\Calculator.jsx">
+        <metrics statements="41" coveredstatements="41" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="23" type="stmt"/>
+        <line num="17" count="23" type="stmt"/>
+        <line num="18" count="23" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="10" type="stmt"/>
+        <line num="21" count="23" type="stmt"/>
+        <line num="22" count="23" type="stmt"/>
+        <line num="23" count="23" type="stmt"/>
+        <line num="24" count="23" type="stmt"/>
+        <line num="25" count="23" type="stmt"/>
+        <line num="26" count="23" type="stmt"/>
+        <line num="27" count="23" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="92" type="stmt"/>
+        <line num="29" count="92" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="92" type="stmt"/>
+        <line num="31" count="23" type="stmt"/>
+        <line num="32" count="23" type="stmt"/>
+        <line num="33" count="23" type="stmt"/>
+        <line num="34" count="23" type="cond" truecount="1" falsecount="0"/>
+        <line num="35" count="92" type="cond" truecount="1" falsecount="0"/>
+        <line num="36" count="23" type="stmt"/>
+        <line num="37" count="23" type="stmt"/>
+        <line num="38" count="23" type="cond" truecount="1" falsecount="0"/>
+        <line num="39" count="23" type="stmt"/>
+        <line num="40" count="23" type="stmt"/>
+        <line num="41" count="23" type="stmt"/>
+      </file>
+    </package>
+    <package name="src">
+      <metrics statements="8" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="main.jsx" path="C:\Users\Albert\Desktop\Programacio\Programes utilitzats\React\LEARNING\React Vitest TDD\src\main.jsx">
+        <metrics statements="8" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
