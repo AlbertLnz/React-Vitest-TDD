@@ -10,6 +10,7 @@ const rows = [
 ]
 
 const operations = ['+', '-', '*', '/']
+const equalSign = '='
 
 const Calculator = () => {
   return (
@@ -27,6 +28,7 @@ const Calculator = () => {
           <span key={operation}>{operation}</span>
         ))
       }
+      <span>{equalSign}</span>
     </section>
   )
 }
@@ -65,11 +67,17 @@ describe('Calculator', () => {
     expect(rows).toHaveLength(4)
   })
 
-  it('Should render operations', () => {
+  it('Should render operations', () => { // Test nº6
     render(<Calculator />)
 
     operations.forEach(operation => {
       screen.getByText(operation)
     })
+  })
+
+  it('Should render equal sign', () => { // Test nº7
+    render(<Calculator />)
+
+    screen.getByText('=')
   })
 })
