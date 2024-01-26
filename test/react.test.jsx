@@ -33,7 +33,7 @@ const Calculator = () => {
       </div>
       {
         operations.map(operation => (
-          <span key={operation}>{operation}</span>
+          <button key={operation} onClick={() => setValue(value.concat(operation))}>{operation}</button>
         ))
       }
       <span>{equalSign}</span>
@@ -119,5 +119,19 @@ describe('Calculator', () => {
 
     const input = screen.getByRole('textbox')
     expect(input.value).toBe('123')
+  })
+
+  it('Should show user input after clicking numbers and operations', () => { // Test nº11
+    render(<Calculator />)
+
+    const numberOne = screen.getByText('1')
+    fireEvent.click(numberOne)
+
+    const plus = screen.getByText('+')
+    fireEvent.click(plus)
+    fireEvent.click(numberOne)
+
+    const input = screen.getByRole('textbox')
+    expect(input.value).toBe('1+1')
   })
 })
