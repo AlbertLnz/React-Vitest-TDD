@@ -16,12 +16,8 @@ const equalSign = '='
 const Calculator = () => {
   const [value, setValue] = useState('')
 
-  const handleNumber = (number) => {
-    setValue(value.concat(number))
-  }
-
-  const handleOperator = (operation) => {
-    setValue(value.concat(operation))
+  const handleElement = (element) => {
+    setValue(value.concat(element))
   }
 
   return (
@@ -31,13 +27,13 @@ const Calculator = () => {
       <div role='grid'>
         {rows.map((row, index) => (
           <div key={index} role='row'>
-            {row.map(number => <button onClick={() => handleNumber(number)} key={number}>{number}</button>)}
+            {row.map(number => <button onClick={() => handleElement(number)} key={number}>{number}</button>)}
           </div>
         ))}
       </div>
       {
         operations.map(operation => (
-          <button key={operation} onClick={() => handleOperator(operation)}>{operation}</button>
+          <button key={operation} onClick={() => handleElement(operation)}>{operation}</button>
         ))
       }
       <span>{equalSign}</span>
