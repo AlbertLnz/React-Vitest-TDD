@@ -36,7 +36,7 @@ const Calculator = () => {
           <button key={operation} onClick={() => handleElement(operation)}>{operation}</button>
         ))
       }
-      <span>{equalSign}</span>
+      <button onClick={() => setValue(eval(value))}>{equalSign}</button> {/** <-- Eval can be harmful !  */}
     </section>
   )
 }
@@ -129,9 +129,28 @@ describe('Calculator', () => {
 
     const plus = screen.getByText('+')
     fireEvent.click(plus)
+
     fireEvent.click(numberOne)
 
     const input = screen.getByRole('textbox')
     expect(input.value).toBe('1+1')
+  })
+
+  it('Should calculate based on user input and show the result', () => { // Test nº12
+    render(<Calculator />)
+
+    const numberOne = screen.getByText('1')
+    fireEvent.click(numberOne)
+
+    const plus = screen.getByText('+')
+    fireEvent.click(plus)
+
+    fireEvent.click(numberOne)
+
+    const equal = screen.getByText(equalSign)
+    fireEvent.click(equal)
+
+    const input = screen.getByRole('textbox')
+    expect(input.value).toBe('2')
   })
 })
