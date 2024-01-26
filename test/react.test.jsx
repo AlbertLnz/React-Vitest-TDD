@@ -9,6 +9,8 @@ const rows = [
   [0]
 ]
 
+const operations = ['+', '-', '*', '/']
+
 const Calculator = () => {
   return (
     <section>
@@ -20,6 +22,11 @@ const Calculator = () => {
           </div>
         ))}
       </div>
+      {
+        operations.map(operation => (
+          <span key={operation}>{operation}</span>
+        ))
+      }
     </section>
   )
 }
@@ -56,5 +63,13 @@ describe('Calculator', () => {
 
     const rows = screen.getAllByRole('row')
     expect(rows).toHaveLength(4)
+  })
+
+  it('Should render operations', () => {
+    render(<Calculator />)
+
+    operations.forEach(operation => {
+      screen.getByText(operation)
+    })
   })
 })
