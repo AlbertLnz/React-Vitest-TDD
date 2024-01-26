@@ -1,7 +1,12 @@
+import { render } from '@testing-library/react'
 import { describe, it } from 'vitest'
 
-describe('Calculator', () => {
-  it('', () => {
+const Calculator = () => {
+  
+}
 
+describe('Calculator', () => {
+  it('Should render', () => {
+    render(<Calculator />)
   })
 })
