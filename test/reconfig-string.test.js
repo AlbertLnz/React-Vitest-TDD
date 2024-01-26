@@ -5,6 +5,8 @@ const reconfigString = (from, to) => {
   if (typeof from !== 'string') throw new Error("'from' param must be a string")
   if (typeof to !== 'string') throw new Error("'to' param must be a string")
 
+  if (from.length !== to.length) return false
+
   return true
 }
 
@@ -27,5 +29,9 @@ describe('reconfigString', () => {
 
   it('Shoud return a boolean', () => { // 5th test
     expect(reconfigString('a', 'b')).toBeTypeOf('boolean')
+  })
+
+  it('Shoud return false if strings provided have different length', () => { // 6th test
+    expect(reconfigString('abc', 'de')).toBe(false)
   })
 })
