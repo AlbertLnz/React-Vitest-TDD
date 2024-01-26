@@ -4,7 +4,7 @@ const fizzbuzz = (number) => {
   if (typeof number !== 'number') throw new Error('Parameter provided must be a number!!')
   if (Number.isNaN(number)) throw new Error('Parameter provided must be a number!!')
 
-  const multiples = { 3: 'fizz', 5: 'buzz' }
+  const multiples = { 3: 'fizz', 5: 'buzz', 7: 'woff' }
   let output = ''
 
   Object.entries(multiples).forEach(([multiplier, word]) => {
@@ -64,9 +64,13 @@ describe('fizzbuzz', () => {
     expect(fizzbuzz(110)).toBe('buzz')
   })
 
-  it("Should return 'fizzbuzz' if number number is multiple of 3 and 5 === multiple of 15", () => { // test nº12
+  it("Should return 'fizzbuzz' if number is multiple of 3 and 5 === multiple of 15", () => { // test nº12
     expect(fizzbuzz(15)).toBe('fizzbuzz')
     expect(fizzbuzz(45)).toBe('fizzbuzz')
-    expect(fizzbuzz(105)).toBe('fizzbuzz')
+    expect(fizzbuzz(60)).toBe('fizzbuzz')
+  })
+
+  it("Should return 'fizzwoff' if number is multiple of 3 and 7", () => { // test nº13
+    expect(fizzbuzz(21)).toBe('fizzwoff')
   })
 })
