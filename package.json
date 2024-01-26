@@ -1,0 +1,24 @@
+{
+  "name": "react-vitest-tdd",
+  "version": "1.0.0",
+  "description": "React Vitest TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbertLnz/React-Vitest-TDD.git"
+  },
+  "keywords": [
+    "React",
+    "Vitest",
+    "TDD"
+  ],
+  "author": "AlbertLnz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlbertLnz/React-Vitest-TDD/issues"
+  },
+  "homepage": "https://github.com/AlbertLnz/React-Vitest-TDD#readme"
+}
