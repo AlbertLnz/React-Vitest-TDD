@@ -10,6 +10,17 @@ const reconfigString = (from, to) => {
   const hasSameUniqueLetters = new Set(from).size === new Set(to).size
   if (!hasSameUniqueLetters) return false
 
+  const transformations = {}
+  for (let i = 0; i < from.length; i++) {
+    const fromLetter = from[i]
+    const toLetter = to[i]
+
+    const storedLetter = transformations[fromLetter]
+    if (storedLetter && storedLetter !== toLetter) return false
+
+    transformations[fromLetter] = toLetter
+  }
+
   return true
 }
 
@@ -44,5 +55,9 @@ describe('reconfigString', () => {
 
   it('Should return false if strings provided have different length even with same unique letters', () => { // 8th test
     expect(reconfigString('aab', 'ab')).toBe(false)
+  })
+
+  it('Should return false if strings has different order of transformation', () => { // 9th test
+    expect(reconfigString('XBOX', 'XXBO')).toBe(false)
   })
 })
