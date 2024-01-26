@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "dev": "vite"
   },
   "repository": {
     "type": "git",
