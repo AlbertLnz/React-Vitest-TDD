@@ -3,6 +3,8 @@ import { describe, expect, it } from 'vitest'
 const fizzbuzz = (number) => {
   if (typeof number !== 'number') throw new Error('Parameter provided must be a number!!')
   if (Number.isNaN(number)) throw new Error('Parameter provided must be a number!!')
+
+  return 1
 }
 
 describe('fizzbuzz', () => {
@@ -20,5 +22,9 @@ describe('fizzbuzz', () => {
 
   it('Should be a number param', () => { // test nº4
     expect(() => fizzbuzz(NaN)).toThrow('Parameter provided must be a number!!')
+  })
+
+  it('Should return 1 if number provided is 1', () => { // test nº5
+    expect(fizzbuzz(1)).toBe(1)
   })
 })
