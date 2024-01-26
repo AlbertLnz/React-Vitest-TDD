@@ -1,5 +1,6 @@
-import { render, screen, cleanup } from '@testing-library/react'
+import { render, screen, cleanup, fireEvent } from '@testing-library/react'
 import { afterEach, describe, it, expect } from 'vitest'
+import { useState } from 'react'
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const rows = [
@@ -13,14 +14,16 @@ const operations = ['+', '-', '*', '/']
 const equalSign = '='
 
 const Calculator = () => {
+  const [value, setValue] = useState('')
+
   return (
     <section>
       <h2>Calculator</h2>
-      <input />
+      <input value={value} readOnly />
       <div role='grid'>
         {rows.map((row, index) => (
           <div key={index} role='row'>
-            {row.map(number => <span key={number}>{number}</span>)}
+            {row.map(number => <button onClick={() => setValue(number)} key={number}>{number}</button>)}
           </div>
         ))}
       </div>
@@ -86,5 +89,16 @@ describe('Calculator', () => {
     render(<Calculator />)
 
     screen.getByRole('textbox')
+  })
+
+  it('Should user input after clicking a number', () => { // Test nº9
+    render(<Calculator />)
+
+    const numberOne = screen.getByText('1')
+
+    fireEvent.click(numberOne)
+
+    const input = screen.getByRole('textbox')
+    expect(input.value).toBe('1')
   })
 })
