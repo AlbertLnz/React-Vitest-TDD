@@ -1,6 +1,7 @@
 import { render, screen, cleanup, fireEvent } from '@testing-library/react'
 import { afterEach, describe, it, expect } from 'vitest'
 import { useState } from 'react'
+import { evaluate } from 'mathjs'
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const rows = [
@@ -36,7 +37,7 @@ const Calculator = () => {
           <button key={operation} onClick={() => handleElement(operation)}>{operation}</button>
         ))
       }
-      <button onClick={() => setValue(eval(value))}>{equalSign}</button> {/** <-- Eval can be harmful !  */}
+      <button onClick={() => setValue(evaluate(value))}>{equalSign}</button>
     </section>
   )
 }
