@@ -30,18 +30,22 @@ describe('fizzbuzz', () => {
     expect(fizzbuzz(1)).toBe(1)
   })
 
-  it('Should return 2 if number provided is 2', () => { // test nº5
+  it('Should return 2 if number provided is 2', () => { // test nº6
     expect(fizzbuzz(2)).toBe(2)
   })
 
-  it("Should return 'fizz' if number provided is 3", () => { // test nº5
+  it("Should return 'fizz' if number provided is 3", () => { // test nº7
     expect(fizzbuzz(3)).toBe('fizz')
   })
 
-  it("Should return 'fizz' if number provided is multiple of 3", () => { // test nº5
+  it("Should return 'fizz' if number provided is multiple of 3", () => { // test nº8
     expect(fizzbuzz(3)).toBe('fizz')
     expect(fizzbuzz(6)).toBe('fizz')
     expect(fizzbuzz(9)).toBe('fizz')
     expect(fizzbuzz(60)).toBe('fizz')
+  })
+
+  it('Should return 4 if number provided is 4', () => { // test nº9 --> UNNECESSARY TEST
+    expect(fizzbuzz(4)).toBe(4)
   })
 })
