@@ -23,7 +23,7 @@ const Calculator = () => {
       <div role='grid'>
         {rows.map((row, index) => (
           <div key={index} role='row'>
-            {row.map(number => <button onClick={() => setValue(number)} key={number}>{number}</button>)}
+            {row.map(number => <button onClick={() => setValue(value.concat(number))} key={number}>{number}</button>)}
           </div>
         ))}
       </div>
@@ -95,10 +95,25 @@ describe('Calculator', () => {
     render(<Calculator />)
 
     const numberOne = screen.getByText('1')
-
     fireEvent.click(numberOne)
 
     const input = screen.getByRole('textbox')
     expect(input.value).toBe('1')
+  })
+
+  it('Should user input after clicking a number several numbers', () => { // Test nº10
+    render(<Calculator />)
+
+    const numberOne = screen.getByText('1')
+    fireEvent.click(numberOne)
+
+    const numberTwo = screen.getByText('2')
+    fireEvent.click(numberTwo)
+
+    const numberThree = screen.getByText('3')
+    fireEvent.click(numberThree)
+
+    const input = screen.getByRole('textbox')
+    expect(input.value).toBe('123')
   })
 })
