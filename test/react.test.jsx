@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react'
-import { describe, it } from 'vitest'
+import { render, screen, cleanup } from '@testing-library/react'
+import { afterEach, describe, it } from 'vitest'
 
 const Calculator = () => {
   return (
@@ -8,6 +8,8 @@ const Calculator = () => {
 }
 
 describe('Calculator', () => {
+  afterEach(cleanup)
+
   it('Should render', () => {
     render(<Calculator />)
   })
