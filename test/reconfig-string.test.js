@@ -7,6 +7,9 @@ const reconfigString = (from, to) => {
 
   if (from.length !== to.length) return false
 
+  const hasSameUniqueLetters = new Set(from).size === new Set(to).size
+  if (!hasSameUniqueLetters) return false
+
   return true
 }
 
@@ -33,5 +36,9 @@ describe('reconfigString', () => {
 
   it('Shoud return false if strings provided have different length', () => { // 6th test
     expect(reconfigString('abc', 'de')).toBe(false)
+  })
+
+  it('Should return false if strings params have different unique letters', () => { // 7th test
+    expect(reconfigString('abc', 'ddf')).toBe(false)
   })
 })
