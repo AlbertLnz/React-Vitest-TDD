@@ -16,6 +16,7 @@ const Calculator = () => {
   return (
     <section>
       <h2>Calculator</h2>
+      <input />
       <div role='grid'>
         {rows.map((row, index) => (
           <div key={index} role='row'>
@@ -79,5 +80,11 @@ describe('Calculator', () => {
     render(<Calculator />)
 
     screen.getByText('=')
+  })
+
+  it('Should render an input', () => { // Test nº8
+    render(<Calculator />)
+
+    screen.getByRole('textbox')
   })
 })
