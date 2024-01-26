@@ -4,6 +4,8 @@ const reconfigString = (from, to) => {
   // if (from === undefined) throw new Error("'from' param is required")
   if (typeof from !== 'string') throw new Error("'from' param must be a string")
   if (typeof to !== 'string') throw new Error("'to' param must be a string")
+
+  return true
 }
 
 describe('reconfigString', () => {
@@ -21,5 +23,9 @@ describe('reconfigString', () => {
 
   it('Should throw if second param is not a string', () => { // 4th test
     expect(() => reconfigString('a')).toThrow()
+  })
+
+  it('Shoud return a boolean', () => { // 5th test
+    expect(reconfigString('a', 'b')).toBeTypeOf('boolean')
   })
 })
