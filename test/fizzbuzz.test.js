@@ -73,4 +73,8 @@ describe('fizzbuzz', () => {
   it("Should return 'fizzwoff' if number is multiple of 3 and 7", () => { // test nº13
     expect(fizzbuzz(21)).toBe('fizzwoff')
   })
+
+  it("Should return 'fizzbuzzwoff' if number is multiple of 3, 5 and 7", () => { // test nº14
+    expect(fizzbuzz(105)).toBe('fizzbuzzwoff')
+  })
 })
