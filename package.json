@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/AlbertLnz/React-Vitest-TDD/issues"
   },
-  "homepage": "https://github.com/AlbertLnz/React-Vitest-TDD#readme"
+  "homepage": "https://github.com/AlbertLnz/React-Vitest-TDD#readme",
+  "devDependencies": {
+    "standard": "17.1.0",
+    "vitest": "1.2.1"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
 }
