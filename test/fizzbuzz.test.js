@@ -5,6 +5,7 @@ const fizzbuzz = (number) => {
   if (Number.isNaN(number)) throw new Error('Parameter provided must be a number!!')
 
   if (number % 3 === 0) return 'fizz'
+  if (number === 5) return 'buzz'
 
   return number
 }
@@ -47,5 +48,9 @@ describe('fizzbuzz', () => {
 
   it('Should return 4 if number provided is 4', () => { // test nº9 --> UNNECESSARY TEST
     expect(fizzbuzz(4)).toBe(4)
+  })
+
+  it("Should return 'buzz' if number provided is 5", () => { // test nº10
+    expect(fizzbuzz(5)).toBe('buzz')
   })
 })
