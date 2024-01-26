@@ -20,6 +20,10 @@ const Calculator = () => {
     setValue(value.concat(number))
   }
 
+  const handleOperator = (operation) => {
+    setValue(value.concat(operation))
+  }
+
   return (
     <section>
       <h2>Calculator</h2>
@@ -33,7 +37,7 @@ const Calculator = () => {
       </div>
       {
         operations.map(operation => (
-          <button key={operation} onClick={() => setValue(value.concat(operation))}>{operation}</button>
+          <button key={operation} onClick={() => handleOperator(operation)}>{operation}</button>
         ))
       }
       <span>{equalSign}</span>
